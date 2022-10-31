@@ -6,11 +6,19 @@ on:
   pull_request:
     branches: [ "main" ]
 
+name: Ruby-build-test CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 jobs:
 
   build:
 
-    runs-on: ruby:2.7.1
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
